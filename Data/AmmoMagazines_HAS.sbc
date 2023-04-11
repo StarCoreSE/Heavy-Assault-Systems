@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<AmmoMagazines>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>AlectoAmmoMag</SubtypeId>
+			</Id>
+			<DisplayName>Alecto Ammo Mag</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\ContractPackage.dds</Icon>
+			<Size>
+				<X>0.20</X>
+				<Y>0.20</Y>
+				<Z>0.20</Z>
+			</Size>
+			<Mass>0</Mass>
+			<Volume>0</Volume>
+			<Model>Models\Components\ContractPackage.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>45</Capacity>
+			<IconSymbol>45</IconSymbol>
+			<AmmoDefinitionId Subtype="AlectoAmmoMag" />
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>TwinAmmoMag</SubtypeId>
+			</Id>
+			<DisplayName>Twin Ammo Mag</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\ContractPackage.dds</Icon>
+			<Size>
+				<X>0.20</X>
+				<Y>0.20</Y>
+				<Z>0.20</Z>
+			</Size>
+			<Mass>0</Mass>
+			<Volume>0</Volume>
+			<Model>Models\Components\ContractPackage.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>3</Capacity>
+			<IconSymbol>3</IconSymbol>
+			<AmmoDefinitionId Subtype="TwinAmmoMag" />
+		</AmmoMagazine>
+		
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>VulcanAmmoMag</SubtypeId>
+			</Id>
+			<DisplayName>Vulcan Ammo Mag</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\ContractPackage.dds</Icon>
+			<Size>
+				<X>0.20</X>
+				<Y>0.20</Y>
+				<Z>0.20</Z>
+			</Size>
+			<Mass>0</Mass>
+			<Volume>0</Volume>
+			<Model>Models\Components\ContractPackage.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1200</Capacity>
+			<IconSymbol>3</IconSymbol>
+			<AmmoDefinitionId Subtype="VulcanAmmoMag" />
+		</AmmoMagazine>
+
+	</AmmoMagazines>
+</Definitions>
