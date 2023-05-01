@@ -17,7 +17,8 @@ namespace Scripts
             HAS_Mammon,
             HAS_Twin,
             HAS_Esper,
-            HAS_Vulcan
+            HAS_Vulcan,
+            HAS_Cyclops
             );
             ArmorDefinitions();
             SupportDefinitions();
