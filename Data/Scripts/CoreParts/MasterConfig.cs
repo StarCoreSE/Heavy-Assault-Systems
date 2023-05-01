@@ -15,8 +15,6 @@ namespace Scripts
             HAS_Thanatos,
             HAS_Alecto,
             HAS_Mammon,
-            HAS_Nott,
-            HAS_Hecate,
             HAS_Twin,
             HAS_Esper,
             HAS_Vulcan

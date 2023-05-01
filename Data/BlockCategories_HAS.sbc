@@ -14,7 +14,6 @@
 			  <string>HAS_Thanatos</string>
 			  <string>HAS_Alecto</string>
 			  <string>HAS_Mammon</string>
-			  <string>HAS_Nott</string>
 			  <string>HAS_Twin</string>
 		  </ItemIds>
 	  </Category>
@@ -27,7 +26,6 @@
 		  <DisplayName>Experimental</DisplayName>
 		  <Name>Experimental</Name>
 		  <ItemIds>
-			  <string>HAS_Hecate</string>
 		  </ItemIds>
 	  </Category>
 	
