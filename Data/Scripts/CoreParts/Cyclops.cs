@@ -56,9 +56,9 @@ namespace Scripts {
             HardPoint = new HardPointDef
             {
                 PartName = "Cyclops", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.25f, // Projectile inaccuracy in degrees.
+                DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 4f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
-                AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
+                AimLeadingPrediction = Off, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released.
                 AddToleranceToTracking = true, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
@@ -91,7 +91,7 @@ namespace Scripts {
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.
-                    IdlePower = 0.25f, // Constant base power draw in MW.
+                    IdlePower = 0f, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -117,19 +117,19 @@ namespace Scripts {
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 120, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
+                    RateOfFire = 3600, // Set this to 3600 for beam weapons. This is how fast your Gun fires.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 300, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, // Heat generated per shot.
-                    MaxHeat = 100, // Max heat before weapon enters cooldown (70% of max heat).
+                    MaxHeat = 180, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = .10f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
-                    HeatSinkRate = 10, // Amount of heat lost per second.
+                    HeatSinkRate = 1, // Amount of heat lost per second.
                     DegradeRof = false, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
-                    ShotsInBurst = 1, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
+                    ShotsInBurst = 10800, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
@@ -141,9 +141,9 @@ namespace Scripts {
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "", // Audio for warmup effect.
-                    FiringSound = "HAS_ThanatosFire", // Audio for firing.
+                    FiringSound = "", // Audio for firing.
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
-                    ReloadSound = "HAS_ThanatosReload", // Sound SubtypeID, for when your Weapon is in a reloading state
+                    ReloadSound = "", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "",
                     HardPointRotationSound = "", // Audio played when turret is moving.
                     BarrelRotationSound = "",
@@ -154,7 +154,7 @@ namespace Scripts {
                 {
                     Effect1 = new ParticleDef
                     {
-                        Name = "ThanatosMuzzleFlash", // SubtypeId of muzzle particle effect.
+                        Name = "", // SubtypeId of muzzle particle effect.
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1), // Deprecated, set color in particle sbc.
                         Offset = Vector(x: 0, y: 0, z: 0), // Offsets the effect from the muzzle empty.
 
@@ -184,8 +184,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                HAS_Cyclops_Ammo,
-                HAS_Cyclops_Guided_Ammo,// Must list all primary, shrapnel, and pattern ammos.
+                HAS_Cyclops_Ammo, // Must list all primary, shrapnel, and pattern ammos.
             },
             //Animations = SA_HMI_ERGaussRF_Animation,
             //Upgrades = UpgradeModules,
