@@ -57,9 +57,39 @@
 
             <MinimumAcquisitionAmount>100000</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>20000000</MaximumAcquisitionAmount>
-        </Component> 
-			
-	<Component>
+        </Component>
+
+      <Component>
+        <Id>
+          <TypeId>Component</TypeId>
+          <SubtypeId>CyclopsComponent</SubtypeId>
+        </Id>
+        <DisplayName>Cyclops Component</DisplayName>
+        <Icon>Textures\GUI\Icons\Cubes\1500mmMacro_Icon.png</Icon>
+        <Size>
+          <X>0.5</X>
+          <Y>0.5</Y>
+          <Z>0.1</Z>
+        </Size>
+        <Mass>4000</Mass>
+        <Volume>500</Volume>
+        <Model>Models\Cubes\Large\generic_component.mwm</Model>
+        <PhysicalMaterial>Metal</PhysicalMaterial>
+        <MaxIntegrity>20000</MaxIntegrity>
+        <DropProbability>0.9</DropProbability>
+        <Health>25000</Health>
+        <MinimumOfferAmount>10</MinimumOfferAmount>
+        <MaximumOfferAmount>500</MaximumOfferAmount>
+        <MinimumOrderAmount>10</MinimumOrderAmount>
+        <MaximumOrderAmount>100</MaximumOrderAmount>
+        <CanPlayerOrder>true</CanPlayerOrder>
+
+        <MinimumAcquisitionAmount>100000</MinimumAcquisitionAmount>
+        <MaximumAcquisitionAmount>20000000</MaximumAcquisitionAmount>
+      </Component>
+
+
+      <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>NyxComponent</SubtypeId>
