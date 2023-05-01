@@ -19,9 +19,9 @@ namespace Scripts {
                     new MountPointDef {
                         SubtypeId = "HAS_Cyclops", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns.
-                        MuzzlePartId = "MissileTurretBarrels", // The subpart where your muzzle empties are located. This is often the elevation subpart.
-                        AzimuthPartId = "MissileTurretBase1", // Your Rotating Subpart, the bit that moves sideways
-                        ElevationPartId = "MissileTurretBarrels",// Your Elevating Subpart, that bit that moves up
+                        MuzzlePartId = "Elevation", // The subpart where your muzzle empties are located. This is often the elevation subpart.
+                        AzimuthPartId = "Azimuth", // Your Rotating Subpart, the bit that moves sideways
+                        ElevationPartId = "Elevation",// Your Elevating Subpart, that bit that moves up
                         DurabilityMod = 0.25f, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
                         IconName = "" // Overlay for block inventory slots, like reactors, refineries, etc.
                     },
@@ -29,10 +29,10 @@ namespace Scripts {
                     
                  }, 
                 Muzzles = new[] {
-                    "muzzle_missile_1", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+                    "Iris", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
                 Ejector = "", // Optional; empty from which to eject "shells" if specified.
-                Scope = "muzzle_missile_1", // Where line of sight checks are performed from. Must be clear of block collision.
+                Scope = "Iris", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = new TargetingDef
             {
@@ -55,7 +55,7 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Thanatos", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "Cyclops", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0.25f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 4f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
