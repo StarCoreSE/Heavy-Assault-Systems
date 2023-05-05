@@ -333,6 +333,7 @@
         </Wave>
       </Waves>
     </Sound>
+	  
     <Sound>
       <Id>
         <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
@@ -371,6 +372,46 @@
         </Wave>
       </Waves>
     </Sound>
+
+	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>HAS_CyclopsPulse</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>2000</MaxDistance>
+		  <PreventSynchronization>0</PreventSynchronization>
+		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+		  <DynamicMusicAmount>50</DynamicMusicAmount>
+		  <Volume>3</Volume>
+		  <PitchVariation>300</PitchVariation>
+		  <Loopable>true</Loopable>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\Gauss\Cyclops Laser Burst.wav</Start>
+			  </Wave>
+		  </Waves>
+	  </Sound>
+
+	  <Sound>
+		  <Id>
+			  <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+			  <SubtypeId>HAS_CyclopsLighting</SubtypeId>
+		  </Id>
+		  <Category>SHOT</Category>
+		  <MaxDistance>2000</MaxDistance>
+		  <PreventSynchronization>0</PreventSynchronization>
+		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
+		  <DynamicMusicAmount>50</DynamicMusicAmount>
+		  <Volume>1</Volume>
+		  <PitchVariation>300</PitchVariation>
+		  <Loopable>true</Loopable>
+		  <Waves>
+			  <Wave Type="D3">
+				  <Start>Audio\Gauss\Cyclops Lighting.wav</Start>
+			  </Wave>
+		  </Waves>
+	  </Sound>
 
   </Sounds>
 </Definitions>

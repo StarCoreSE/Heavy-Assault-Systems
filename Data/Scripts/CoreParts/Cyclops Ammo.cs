@@ -37,7 +37,7 @@ namespace Scripts
             AmmoRound = "Cyclops Round", // Name of ammo in terminal, should be different for each ammo type used by the same weapon. Is used by Shrapnel.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 0.1f, // Scaler for energy per shot (EnergyCost * BaseDamage * (RateOfFire / 3600) * BarrelsPerShot * TrajectilesPerBarrel). Uses EffectStrength instead of BaseDamage if EWAR.
-            BaseDamage = 600f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 5000f, // Direct damage; one steel plate is worth 100.
             Mass = 0f, // In kilograms; how much force the impact will apply to the target.
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
@@ -161,7 +161,7 @@ namespace Scripts
                     Enable = false,
                     Radius = 5f, // Meters
                     Damage = 5f,
-                    Depth = 1f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
@@ -174,10 +174,10 @@ namespace Scripts
                 },
                 EndOfLife = new EndOfLifeDef
                 {
-                    Enable = false,
-                    Radius = 0f, // Radius of AOE effect, in meters.
-                    Damage = 0f,
-                    Depth = 0f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
+                    Enable = true,
+                    Radius = 5f, // Radius of AOE effect, in meters.
+                    Damage = 175000f,
+                    Depth = 5f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage, except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
                     //.Linear drops evenly by distance from center out to max radius
@@ -270,7 +270,7 @@ namespace Scripts
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-                MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
+                MaxTrajectoryTime = 15, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 10f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -297,29 +297,37 @@ namespace Scripts
             },
             AmmoGraphics = new GraphicDef
             {
-                ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
-                VisualProbability = 1f, // %
+                ModelName = "",
+                VisualProbability = 1f,
                 ShieldHitDraw = false,
                 Particles = new AmmoParticleDef
                 {
                     Ammo = new ParticleDef
                     {
                         Name = "", //ShipWelderArc
+                        Color = Color(red: 128, green: 0, blue: 0, alpha: 32),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 2,
+                            Restart = false,
+                            MaxDistance = 5000,
+                            MaxDuration = 0,
+                            Scale = 1,
                         },
                     },
                     Hit = new ParticleDef
                     {
-                        Name = "",
+                        Name = "TransformerPop",
                         ApplyToShield = true,
+                        Color = Color(red: 1, green: 1, blue: 1, alpha: 1f),
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1,
-                            HitPlayChance = 1f,
+                            Restart = false,
+                            MaxDistance = 1000,
+                            MaxDuration = 0,
+                            Scale = 1f,
+                            HitPlayChance = 0.05f,
                         },
                     },
                     Eject = new ParticleDef
@@ -336,14 +344,14 @@ namespace Scripts
                 },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 0f, end: 0f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0.75f, end: 2f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 2f, //
-                        Width = 2f, //
-                        Color = Color(red: 0, green: 1, blue: 8f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Length = 0.5f, //
+                        Width = 0.25f, //
+                        Color = Color(red: 15f, green: 15, blue: 55f, alpha: 0.1f), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
@@ -352,18 +360,18 @@ namespace Scripts
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
                         Segmentation = new SegmentDef
                         {
-                            Enable = false, // If true Tracer TextureMode is ignored
+                            Enable = true, // If true Tracer TextureMode is ignored
                             Textures = new[] {
-                                "", // Please always have this Line set, if this Section is enabled.
+                                "WeaponLaser", // Please always have this Line set, if this Section is enabled.
                             },
-                            SegmentLength = 0f, // Uses the values below.
+                            SegmentLength = 50f, // Uses the values below.
                             SegmentGap = 0f, // Uses Tracer textures and values
-                            Speed = 1f, // meters per second
-                            Color = Color(red: 1, green: 2, blue: 2.5f, alpha: 1),
+                            Speed = 0f, // meters per second
+                            Color = Color(red: 15, green: 15, blue: 55f, alpha: 0.1f),
                             WidthMultiplier = 1f,
-                            Reverse = false, 
+                            Reverse = false,
                             UseLineVariance = true,
-                            WidthVariance = Random(start: 0f, end: 0f),
+                            WidthVariance = Random(start: 0.5f, end: 0.75f),
                             ColorVariance = Random(start: 0f, end: 0f)
                         }
                     },
@@ -374,25 +382,25 @@ namespace Scripts
                             "WeaponLaser", // Please always have this Line set, if this Section is enabled.
                         },
                         TextureMode = Normal,
-                        DecayTime = 20, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
-                        Color = Color(red: 10, green: 10, blue: 10, alpha: 1),
-                        Back = true,
-                        CustomWidth = 1f,
-                        UseWidthVariance = false,
+                        DecayTime = 30, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
+                        Color = Color(red: 15, green: 15, blue: 55, alpha: 0.1f),
+                        Back = false,
+                        CustomWidth = 0,
+                        UseWidthVariance = true,
                         UseColorFade = true,
                     },
                     OffsetEffect = new OffsetEffectDef
                     {
-                        MaxOffset = 0,// 0 offset value disables this effect
-                        MinLength = 0.2f,
-                        MaxLength = 3,
+                        MaxOffset = 25,// 0 offset value disables this effect
+                        MinLength = 50f,
+                        MaxLength = 100,
                     },
                 },
             },
             AmmoAudio = new AmmoAudioDef
             {
-                TravelSound = "HAS_ThanatosWhistle", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
-                HitSound = "HAS_ThanatosFireFar",
+                TravelSound = "", // SubtypeID for your Sound File. Travel, is sound generated around your Projectile in flight
+                HitSound = "",
                 ShieldHitSound = "",
                 PlayerHitSound = "",
                 VoxelHitSound = "",
