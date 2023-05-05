@@ -429,7 +429,7 @@
 			 15km Manual/Painter Targeting Range
 			 Kinetic Damage
 		 </Description>
-		 <Icon>Textures\GUI\Icons\Cubes\1500mmMacro_Icon.png</Icon>
+		 <Icon>Textures\Models\Housing.dds</Icon>
 		 <CubeSize>Large</CubeSize>
 		 <GuiVisible>true</GuiVisible>
 		 <BlockTopology>TriangleMesh</BlockTopology>
