@@ -32,7 +32,7 @@ namespace Scripts {
                     "Iris", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
                 Ejector = "", // Optional; empty from which to eject "shells" if specified.
-                Scope = "Iris", // Where line of sight checks are performed from. Must be clear of block collision.
+                Scope = "Scope", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = new TargetingDef
             {
