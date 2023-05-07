@@ -84,10 +84,10 @@ namespace Scripts {
                 {
                     RotateRate = 0.01f, // Max traversal speed of azimuth subpart in radians per tick (0.1 is approximately 360 degrees per second).
                     ElevateRate = 0.01f, // Max traversal speed of elevation subpart in radians per tick.
-                    MinAzimuth = -20,
-                    MaxAzimuth = 20,
-                    MinElevation = -20,
-                    MaxElevation = 20,
+                    MinAzimuth = -15,
+                    MaxAzimuth = 15,
+                    MinElevation = -15,
+                    MaxElevation = 15,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.
@@ -129,7 +129,7 @@ namespace Scripts {
                     Cooldown = .10f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
                     HeatSinkRate = 1, // Amount of heat lost per second.
                     DegradeRof = false, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
-                    ShotsInBurst = 9, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
+                    ShotsInBurst = 30, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
@@ -141,7 +141,7 @@ namespace Scripts {
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "", // Audio for warmup effect.
-                    FiringSound = "HAS_CyclopsLighting", // Audio for firing.
+                    FiringSound = "HAS_CyclopsThunderclapDelayed", // Audio for firing.
                     FiringSoundPerShot = false, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
                     ReloadSound = "", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "",

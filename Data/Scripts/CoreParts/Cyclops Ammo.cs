@@ -87,7 +87,9 @@ namespace Scripts
             Pattern = new PatternDef
             {
                 Patterns = new[] { // If enabled, set of multiple ammos to fire in order instead of the main ammo.
-                    "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops Round",
+                    "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False",
+                    "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False",
+                    "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops False", "Cyclops Round",
                 },
                 Mode = Weapon, // Select when to activate this pattern, options: Never, Weapon, Fragment, Both 
                 TriggerChance = 1f, // This is %
@@ -270,7 +272,7 @@ namespace Scripts
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-                MaxTrajectoryTime = 9, // How long the weapon must fire before it reaches MaxTrajectory.
+                MaxTrajectoryTime = 15, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 10f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
@@ -661,7 +663,7 @@ namespace Scripts
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
-                MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
+                MaxTrajectoryTime = 15, // How long the weapon must fire before it reaches MaxTrajectory.
                 Smarts = new SmartsDef
                 {
                     Inaccuracy = 10f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
