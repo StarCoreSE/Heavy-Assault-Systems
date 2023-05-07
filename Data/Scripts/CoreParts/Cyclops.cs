@@ -141,13 +141,13 @@ namespace Scripts {
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "", // Audio for warmup effect.
-                    FiringSound = "HAS_CyclopsThunderclapDelayed", // Audio for firing.
+                    FiringSound = "HAS_CyclopsThunderclap", // Audio for firing.
                     FiringSoundPerShot = false, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
                     ReloadSound = "", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "",
                     HardPointRotationSound = "", // Audio played when turret is moving.
                     BarrelRotationSound = "",
-                    FireSoundEndDelay = 120, // How long the firing audio should keep playing after firing stops. Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
+                    FireSoundEndDelay = 240, // How long the firing audio should keep playing after firing stops. Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
                     FireSoundNoBurst = false,
                 },
                 Graphics = new HardPointParticleDef
