@@ -184,7 +184,8 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                HAS_Cyclops_Ammo, // Must list all primary, shrapnel, and pattern ammos.
+                HAS_Cyclops_Ammo,
+                HAS_Cyclops_False_Ammo,// Must list all primary, shrapnel, and pattern ammos.
             },
             //Animations = SA_HMI_ERGaussRF_Animation,
             //Upgrades = UpgradeModules,
