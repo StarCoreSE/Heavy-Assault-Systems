@@ -19,9 +19,9 @@ namespace Scripts {
                     new MountPointDef {
                         SubtypeId = "HAS_Thanatos", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns.
-                        MuzzlePartId = "MissileTurretBarrels", // The subpart where your muzzle empties are located. This is often the elevation subpart.
-                        AzimuthPartId = "MissileTurretBase1", // Your Rotating Subpart, the bit that moves sideways
-                        ElevationPartId = "MissileTurretBarrels",// Your Elevating Subpart, that bit that moves up
+                        MuzzlePartId = "Elevation", // The subpart where your muzzle empties are located. This is often the elevation subpart.
+                        AzimuthPartId = "Azimuth", // Your Rotating Subpart, the bit that moves sideways
+                        ElevationPartId = "Elevation",// Your Elevating Subpart, that bit that moves up
                         DurabilityMod = 0.25f, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
                         IconName = "" // Overlay for block inventory slots, like reactors, refineries, etc.
                     },
@@ -29,10 +29,10 @@ namespace Scripts {
                     
                  }, 
                 Muzzles = new[] {
-                    "muzzle_missile_1", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+                    "Barrel", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
                 Ejector = "", // Optional; empty from which to eject "shells" if specified.
-                Scope = "muzzle_missile_1", // Where line of sight checks are performed from. Must be clear of block collision.
+                Scope = "Barrel", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = new TargetingDef
             {
@@ -84,10 +84,10 @@ namespace Scripts {
                 {
                     RotateRate = 0.001f, // Max traversal speed of azimuth subpart in radians per tick (0.1 is approximately 360 degrees per second).
                     ElevateRate = 0.001f, // Max traversal speed of elevation subpart in radians per tick.
-                    MinAzimuth = -20,
-                    MaxAzimuth = 20,
-                    MinElevation = -20,
-                    MaxElevation = 20,
+                    MinAzimuth = -15,
+                    MaxAzimuth = 15,
+                    MinElevation = -15,
+                    MaxElevation = 15,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.
