@@ -18,7 +18,11 @@ namespace Scripts
             HAS_Twin,
             HAS_Esper,
             HAS_Vulcan,
-            HAS_Cyclops
+            HAS_Cyclops,
+            HAS_Crossfield,
+            HAS_CrossfieldOne,
+            HAS_CrossfieldTwo,
+            HAS_CrossfieldThree
             );
             ArmorDefinitions();
             SupportDefinitions();

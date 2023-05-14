@@ -11,17 +11,17 @@ using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.Hardwar
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line
-        WeaponDefinition HAS_Thanatos => new WeaponDefinition
+        WeaponDefinition HAS_CrossfieldTwo => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "HAS_Thanatos", // Block Subtypeid. Your Cubeblocks contain this information
+                        SubtypeId = "HAS_Crossfield", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns.
-                        MuzzlePartId = "Elevation", // The subpart where your muzzle empties are located. This is often the elevation subpart.
-                        AzimuthPartId = "Azimuth", // Your Rotating Subpart, the bit that moves sideways
-                        ElevationPartId = "Elevation",// Your Elevating Subpart, that bit that moves up
+                        MuzzlePartId = "Elevation Three", // The subpart where your muzzle empties are located. This is often the elevation subpart.
+                        AzimuthPartId = "Azimuth Three", // Your Rotating Subpart, the bit that moves sideways
+                        ElevationPartId = "Elevation Three",// Your Elevating Subpart, that bit that moves up
                         DurabilityMod = 0.25f, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
                         IconName = "" // Overlay for block inventory slots, like reactors, refineries, etc.
                     },
@@ -29,15 +29,15 @@ namespace Scripts {
                     
                  }, 
                 Muzzles = new[] {
-                    "Barrel", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+                    "Barrel03", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
                 Ejector = "", // Optional; empty from which to eject "shells" if specified.
-                Scope = "Barrel", // Where line of sight checks are performed from. Must be clear of block collision.
+                Scope = "Barrel03", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
+                    Projectiles, Grids, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals
                 },
                 SubSystems = new[] {
                     Power, Thrust, Offense, Utility, Production, Any, // Subsystem targeting priority: Offense, Utility, Power, Production, Thrust, Jumping, Steering, Any
@@ -55,10 +55,10 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Thanatos", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0.25f, // Projectile inaccuracy in degrees.
-                AimingTolerance = 180f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
-                AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
+                PartName = "Crossfield", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
+                AimingTolerance = 45f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
+                AimLeadingPrediction = Off, // Level of turret aim prediction; Off, Basic, Accurate, Advanced
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released.
                 AddToleranceToTracking = true, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon can be fired underwater when using WaterMod.
@@ -82,16 +82,16 @@ namespace Scripts {
                 },
                 HardWare = new HardwareDef
                 {
-                    RotateRate = 0.001f, // Max traversal speed of azimuth subpart in radians per tick (0.1 is approximately 360 degrees per second).
-                    ElevateRate = 0.001f, // Max traversal speed of elevation subpart in radians per tick.
-                    MinAzimuth = -15,
-                    MaxAzimuth = 15,
-                    MinElevation = -15,
+                    RotateRate = 0.01f, // Max traversal speed of azimuth subpart in radians per tick (0.1 is approximately 360 degrees per second).
+                    ElevateRate = 0.01f, // Max traversal speed of elevation subpart in radians per tick.
+                    MinAzimuth = -45,
+                    MaxAzimuth = 45,
+                    MinElevation = -5,
                     MaxElevation = 15,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.
-                    IdlePower = 0.25f, // Constant base power draw in MW.
+                    IdlePower = 0f, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -121,17 +121,17 @@ namespace Scripts {
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 600, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 0, // Heat generated per shot.
-                    MaxHeat = 100, // Max heat before weapon enters cooldown (70% of max heat).
+                    MaxHeat = 180, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = .10f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
-                    HeatSinkRate = 10, // Amount of heat lost per second.
+                    HeatSinkRate = 1, // Amount of heat lost per second.
                     DegradeRof = false, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
-                    ShotsInBurst = 1, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
+                    ShotsInBurst = 0, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
+                    FireFull = false, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // Visual only, 0 disables and uses RateOfFire.
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
@@ -141,26 +141,26 @@ namespace Scripts {
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "", // Audio for warmup effect.
-                    FiringSound = "HAS_ThanatosFire", // Audio for firing.
-                    FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
-                    ReloadSound = "HAS_ThanatosReload", // Sound SubtypeID, for when your Weapon is in a reloading state
+                    FiringSound = "", // Audio for firing.
+                    FiringSoundPerShot = false, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
+                    ReloadSound = "", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "",
                     HardPointRotationSound = "", // Audio played when turret is moving.
                     BarrelRotationSound = "",
-                    FireSoundEndDelay = 120, // How long the firing audio should keep playing after firing stops. Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
-                    FireSoundNoBurst = true,
+                    FireSoundEndDelay = 240, // How long the firing audio should keep playing after firing stops. Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
+                    FireSoundNoBurst = false,
                 },
                 Graphics = new HardPointParticleDef
                 {
                     Effect1 = new ParticleDef
                     {
-                        Name = "ThanatosMuzzleFlash", // SubtypeId of muzzle particle effect.
+                        Name = "", // SubtypeId of muzzle particle effect.
                         Color = Color(red: 1, green: 1, blue: 1, alpha: 1), // Deprecated, set color in particle sbc.
                         Offset = Vector(x: 0, y: 0, z: 0), // Offsets the effect from the muzzle empty.
 
                         Extras = new ParticleOptionDef
                         {
-                            Loop = false, // Set this to the same as in the particle sbc!
+                            Loop = true, // Set this to the same as in the particle sbc!
                             Restart = false, // Whether to end a looping effect instantly when firing stops.
                             MaxDistance = 1500, // Max distance at which this effect should be visible. NOTE: This will use whichever MaxDistance value is higher across Effect1 and Effect2!
                             MaxDuration = 0, // Deprecated.
@@ -184,8 +184,7 @@ namespace Scripts {
                 },
             },
             Ammos = new[] {
-                HAS_Thanatos_Ammo,
-                HAS_Thanatos_Guided_Ammo,// Must list all primary, shrapnel, and pattern ammos.
+                HAS_Crossfield_Ammo,  // Must list all primary, shrapnel, and pattern ammos.
             },
             //Animations = SA_HMI_ERGaussRF_Animation,
             //Upgrades = UpgradeModules,

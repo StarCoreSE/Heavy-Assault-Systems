@@ -27,6 +27,7 @@
 		  <DisplayName>Experimental</DisplayName>
 		  <Name>Experimental</Name>
 		  <ItemIds>
+			  <string>HAS_Crossfield</string>
 		  </ItemIds>
 	  </Category>
 	

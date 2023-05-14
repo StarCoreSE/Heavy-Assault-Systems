@@ -26,6 +26,27 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>MammonAmmoMag</SubtypeId>
+			</Id>
+			<DisplayName>Mammon Ammo Mag</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\ContractPackage.dds</Icon>
+			<Size>
+				<X>0.20</X>
+				<Y>0.20</Y>
+				<Z>0.20</Z>
+			</Size>
+			<Mass>0</Mass>
+			<Volume>0</Volume>
+			<Model>Models\Components\ContractPackage.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>120</Capacity>
+			<IconSymbol>45</IconSymbol>
+			<AmmoDefinitionId Subtype="MammonAmmoMag" />
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>TwinAmmoMag</SubtypeId>
 			</Id>
 			<DisplayName>Twin Ammo Mag</DisplayName>
@@ -85,5 +106,48 @@
 			<IconSymbol>3</IconSymbol>
 			<AmmoDefinitionId Subtype="CyclopsAmmoMag" />
 		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>ThanatosAmmoMag</SubtypeId>
+			</Id>
+			<DisplayName>Thanatos Ammo Mag</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\ContractPackage.dds</Icon>
+			<Size>
+				<X>0.20</X>
+				<Y>0.20</Y>
+				<Z>0.20</Z>
+			</Size>
+			<Mass>0</Mass>
+			<Volume>0</Volume>
+			<Model>Models\Components\ContractPackage.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1</Capacity>
+			<IconSymbol>3</IconSymbol>
+			<AmmoDefinitionId Subtype="ThanatosAmmoMag" />
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>CrossfieldAmmoMag</SubtypeId>
+			</Id>
+			<DisplayName>Crossfield Ammo Mag</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\ContractPackage.dds</Icon>
+			<Size>
+				<X>0.20</X>
+				<Y>0.20</Y>
+				<Z>0.20</Z>
+			</Size>
+			<Mass>0</Mass>
+			<Volume>0</Volume>
+			<Model>Models\Components\ContractPackage.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>600</Capacity>
+			<IconSymbol>3</IconSymbol>
+			<AmmoDefinitionId Subtype="CrossfieldAmmoMag" />
+		</AmmoMagazine>
+		
 	</AmmoMagazines>
 </Definitions>
