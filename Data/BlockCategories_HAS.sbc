@@ -28,6 +28,7 @@
 		  <Name>Experimental</Name>
 		  <ItemIds>
 			  <string>HAS_Crossfield</string>
+			  <string>HAS_MammonMK2</string>
 		  </ItemIds>
 	  </Category>
 	
