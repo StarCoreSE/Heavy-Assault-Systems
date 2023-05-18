@@ -32,7 +32,7 @@ namespace Scripts {
                     "Barrel04", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
                 Ejector = "", // Optional; empty from which to eject "shells" if specified.
-                Scope = "Barrel04", // Where line of sight checks are performed from. Must be clear of block collision.
+                Scope = "Barrel04s", // Where line of sight checks are performed from. Must be clear of block collision.
             },
             Targeting = new TargetingDef
             {
@@ -86,8 +86,8 @@ namespace Scripts {
                     ElevateRate = 0.02f, // Max traversal speed of elevation subpart in radians per tick.
                     MinAzimuth = -45,
                     MaxAzimuth = 45,
-                    MinElevation = 0,
-                    MaxElevation = 15,
+                    MinElevation = -5,
+                    MaxElevation = 0,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.

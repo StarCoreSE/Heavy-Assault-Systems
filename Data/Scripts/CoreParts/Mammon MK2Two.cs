@@ -84,8 +84,8 @@ namespace Scripts {
                 {
                     RotateRate = 0.008f, // Max traversal speed of azimuth subpart in radians per tick (0.1 is approximately 360 degrees per second).
                     ElevateRate = 0.008f, // Max traversal speed of elevation subpart in radians per tick.
-                    MinAzimuth = -5,
-                    MaxAzimuth = 5,
+                    MinAzimuth = 0,
+                    MaxAzimuth = 0,
                     MinElevation = -5,
                     MaxElevation = 5,
                     HomeAzimuth = 0, // Default resting rotation angle

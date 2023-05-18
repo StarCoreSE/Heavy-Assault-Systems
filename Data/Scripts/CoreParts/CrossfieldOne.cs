@@ -86,8 +86,8 @@ namespace Scripts {
                     ElevateRate = 0.02f, // Max traversal speed of elevation subpart in radians per tick.
                     MinAzimuth = -45,
                     MaxAzimuth = 45,
-                    MinElevation = 0,
-                    MaxElevation = 15,
+                    MinElevation = -5,
+                    MaxElevation = 0,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.

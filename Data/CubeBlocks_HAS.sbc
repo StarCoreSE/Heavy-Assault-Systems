@@ -85,7 +85,7 @@
 			 Medium-Low Shield Damage
 			 Medium Component Damage
 			 4km Targeting Range
-			 15km Manual/Painter Targeting Range
+			 15km MANUAL ONLY Targeting Range
 			 Kinetic Damage
 		 </Description>
 		 <Icon>Textures\Models\ThanatosV2.dds</Icon>
@@ -426,8 +426,7 @@
 			 Medium-Low Shield Damage
 			 Medium Component Damage
 			 4km Targeting Range
-			 15km Manual/Painter Targeting Range
-			 Kinetic Damage
+			 Energy Damage
 		 </Description>
 		 <Icon>Textures\Models\Housing.dds</Icon>
 		 <CubeSize>Large</CubeSize>
@@ -564,7 +563,6 @@
 			 Medium-Low Shield Damage
 			 Medium Component Damage
 			 4km Targeting Range
-			 15km Manual/Painter Targeting Range
 			 Kinetic Damage
 		 </Description>
 		 <Icon>Textures\Models\Mammon Mk2.dds</Icon>
