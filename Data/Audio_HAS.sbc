@@ -404,11 +404,11 @@
 		  <DynamicMusicCategory>HeavyFight</DynamicMusicCategory>
 		  <DynamicMusicAmount>50</DynamicMusicAmount>
 		  <Volume>1</Volume>
-		  <PitchVariation>300</PitchVariation>
+		  <PitchVariation>100</PitchVariation>
 		  <Loopable>true</Loopable>
 		  <Waves>
 			  <Wave Type="D3">
-				  <Start>Audio\Gauss\Cyclops Lighting.wav</Start>
+				  <Start>Audio\Gauss\CyclopsBassLaser.wav</Start>
 			  </Wave>
 		  </Waves>
 	  </Sound>
