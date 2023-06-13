@@ -123,7 +123,7 @@
 			<Volume>0</Volume>
 			<Model>Models\Components\ContractPackage.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>120</Capacity>
+			<Capacity>480</Capacity>
 			<IconSymbol>3</IconSymbol>
 			<AmmoDefinitionId Subtype="CrossfieldAmmoMag" />
 		</AmmoMagazine>
