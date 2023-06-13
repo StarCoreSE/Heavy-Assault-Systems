@@ -89,27 +89,6 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>CyclopsAmmoMag</SubtypeId>
-			</Id>
-			<DisplayName>Cyclops Ammo Mag</DisplayName>
-			<Icon>Textures\GUI\Icons\Items\ContractPackage.dds</Icon>
-			<Size>
-				<X>0.20</X>
-				<Y>0.20</Y>
-				<Z>0.20</Z>
-			</Size>
-			<Mass>0</Mass>
-			<Volume>0</Volume>
-			<Model>Models\Components\ContractPackage.mwm</Model>
-			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>9</Capacity>
-			<IconSymbol>3</IconSymbol>
-			<AmmoDefinitionId Subtype="CyclopsAmmoMag" />
-		</AmmoMagazine>
-
-		<AmmoMagazine>
-			<Id>
-				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>ThanatosAmmoMag</SubtypeId>
 			</Id>
 			<DisplayName>Thanatos Ammo Mag</DisplayName>
@@ -134,6 +113,27 @@
 				<SubtypeId>CrossfieldAmmoMag</SubtypeId>
 			</Id>
 			<DisplayName>Crossfield Ammo Mag</DisplayName>
+			<Icon>Textures\GUI\Icons\Items\ContractPackage.dds</Icon>
+			<Size>
+				<X>0.20</X>
+				<Y>0.20</Y>
+				<Z>0.20</Z>
+			</Size>
+			<Mass>0</Mass>
+			<Volume>0</Volume>
+			<Model>Models\Components\ContractPackage.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>120</Capacity>
+			<IconSymbol>3</IconSymbol>
+			<AmmoDefinitionId Subtype="CrossfieldAmmoMag" />
+		</AmmoMagazine>
+
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>CyclopsAmmoMag</SubtypeId>
+			</Id>
+			<DisplayName>Cyclops Ammo Mag</DisplayName>
 			<Icon>Textures\GUI\Icons\Items\ContractPackage.dds</Icon>
 			<Size>
 				<X>0.20</X>
