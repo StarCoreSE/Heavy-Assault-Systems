@@ -120,7 +120,7 @@
 		 <MirroringY>Z</MirroringY>
 		 <MirroringZ>Y</MirroringZ>
 		 <EdgeType>Light</EdgeType>
-		 <BuildTimeSeconds>30</BuildTimeSeconds>
+		 <BuildTimeSeconds>190</BuildTimeSeconds>
 		 <OverlayTexture>Textures\GUI\Screens\K_camera_overlay_1.dds</OverlayTexture>
 		 <WeaponDefinitionId Subtype="K_HSR_Gun"/>
 		 <InventoryMaxVolume>1</InventoryMaxVolume>
