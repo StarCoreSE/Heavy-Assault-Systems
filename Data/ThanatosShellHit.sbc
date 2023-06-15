@@ -232,17 +232,17 @@
                       </Key>
                       <Key>
                         <Time>0.07475376</Time>
-                        <ValueFloat>20</ValueFloat>
+                        <ValueFloat>10</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.174741</Time>
-                        <ValueFloat>50</ValueFloat>
+                        <ValueFloat>10</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.456509918</Time>
-                        <ValueFloat>100</ValueFloat>
+                        <ValueFloat>20</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -564,7 +564,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>50</ValueFloat>
+                  <ValueFloat>10</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -573,7 +573,7 @@
               <Keys>
                 <Key>
                   <Time>0</Time>
-                  <ValueFloat>100</ValueFloat>
+                  <ValueFloat>20</ValueFloat>
                   <Value2D />
                 </Key>
               </Keys>
@@ -1276,7 +1276,7 @@
             </Property>
           </Properties>
         </ParticleGeneration>
-        <ParticleGeneration Name="Clone of debris" Version="0">
+        <ParticleGeneration Name="smoke" Version="0">
           <GenerationType>GPU</GenerationType>
           <Properties>
             <Property AnimationType="Const" Name="Array size" Type="Vector3">
@@ -1491,22 +1491,22 @@
                     <Keys>
                       <Key>
                         <Time>0</Time>
-                        <ValueFloat>20</ValueFloat>
+                        <ValueFloat>10</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
-                        <ValueFloat>20</ValueFloat>
+                        <ValueFloat>10</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
-                        <ValueFloat>20</ValueFloat>
+                        <ValueFloat>10</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>20</ValueFloat>
+                        <ValueFloat>10</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>

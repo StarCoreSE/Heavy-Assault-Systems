@@ -432,7 +432,7 @@
               <ValueFloat>1</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Radius var" Type="Float">
-              <ValueFloat>5</ValueFloat>
+              <ValueFloat>1</ValueFloat>
             </Property>
             <Property AnimationType="Const" Name="Rotation velocity collision multiplier" Type="Float">
               <ValueFloat>1</ValueFloat>
@@ -671,17 +671,17 @@
                       </Key>
                       <Key>
                         <Time>0.112783112</Time>
-                        <ValueFloat>8</ValueFloat>
+                        <ValueFloat>4</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
-                        <ValueFloat>8</ValueFloat>
+                        <ValueFloat>4</ValueFloat>
                         <Value2D />
                       </Key>
                       <Key>
                         <Time>1</Time>
-                        <ValueFloat>8</ValueFloat>
+                        <ValueFloat>4</ValueFloat>
                         <Value2D />
                       </Key>
                     </Keys>
@@ -909,7 +909,7 @@
       </ParticleGenerations>
       <ParticleLights />
       <DistanceMax>15000</DistanceMax>
-      <Priority>-1</Priority>
+      <Priority>1</Priority>
     </ParticleEffect>
   </ParticleEffects>
 </Definitions>
