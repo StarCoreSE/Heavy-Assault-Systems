@@ -85,8 +85,8 @@
 			 Medium-Low Shield Damage
 			 Medium Component Damage
 			 4km Targeting Range
-			 15km MANUAL ONLY Targeting Range
-       12s Reload
+			 10km MANUAL ONLY Targeting Range
+       Overheats
 			 Kinetic Damage
 		 </Description>
 		 <Icon>Textures\Models\ThanatosV2.dds</Icon>
