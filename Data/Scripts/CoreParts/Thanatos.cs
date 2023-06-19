@@ -185,7 +185,8 @@ namespace Scripts {
             },
             Ammos = new[] {
                 HAS_Thanatos_Ammo,
-                HAS_Thanatos_Guided_Ammo,// Must list all primary, shrapnel, and pattern ammos.
+                HAS_Thanatos_Guided_Ammo,
+                HAS_Thanatos_UnGuided_Ammo,// Must list all primary, shrapnel, and pattern ammos.
             },
             //Animations = SA_HMI_ERGaussRF_Animation,
             //Upgrades = UpgradeModules,
