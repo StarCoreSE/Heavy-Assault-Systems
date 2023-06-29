@@ -357,8 +357,8 @@
 		 <CubeSize>Large</CubeSize>
 		 <GuiVisible>true</GuiVisible>
 		 <BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="2" y="4" z="13"/>
-			<ModelOffset x="0" y="0" z="7"/>
+			<Size x="2" y="4" z="8"/>
+			<ModelOffset x="0" y="0" z="0"/>
 		 <Model>Models\Vulcan.mwm</Model>
 		 <UseModelIntersection>true</UseModelIntersection>
 		 <Components>
